@@ -10,11 +10,12 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 
+
 const path = {
     build: {
         js: 'build/js',
         css: 'build/css/',
-        asstes: 'build/assets'
+        assets: 'build/assets'
     },
 
     src: {

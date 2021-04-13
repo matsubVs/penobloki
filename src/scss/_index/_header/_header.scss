@@ -1,0 +1,85 @@
+@import "_nav";
+@import "_burger";
+
+
+.header {
+    &__wrapper {
+        justify-content: space-between;
+    }
+
+    &__logo {
+    }
+
+    &__img {
+    }
+
+    &__company-name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.15em;
+        
+        color: #FFFFFF;
+    }
+
+    &__nav {
+    }
+
+    &__call {
+    }
+
+    &__swap {
+        cursor: pointer;
+        width: 14px;
+        height: 9px;
+        background-image: url("../assets/arrow.svg") no-repeat;
+        margin-left: 10px;
+        transition: transform .3s;
+
+        @include _768 {
+            display: none;
+        }
+
+        &.transform {
+            transform: rotate(180deg);
+            transition: transform .3s;
+        }
+    }
+
+    &__phones {
+        font-family: Gilroy-Bold, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 29px;
+        
+        color: #FFFFFF;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include _768 {
+            display: none;
+        }
+    }
+
+    &__phone {
+        transition: all .3s;
+        &:last-child {
+            width: 300px;
+            opacity: 0;
+            position: absolute;
+            visibility: hidden;
+            font-size: 17px;
+        }
+
+        &.transform {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-60px) translateY(25px);
+            transition: all .3s;
+        }
+    }
+}
