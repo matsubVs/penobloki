@@ -27,6 +27,10 @@ swapArrow.addEventListener('click', () => {
 burger.addEventListener('click', () => {;
     nav.classList.toggle('transform');
     overlay.classList.toggle('open');
-    lockScroll();
+    if (document.body.classList.contains('lock')) {
+        unlockScroll();
+    } else {
+        lockScroll();
+    }
     burger.classList.toggle('transform');
 });
