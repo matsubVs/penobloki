@@ -1,0 +1,71 @@
+.advantages {
+    background-image: url("../assets/concrete.webp") no-repeat center/cover;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    &__title {
+        font-family: Gilroy-Bold;
+        text-align: center;
+        max-width: 470px;
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 66px;
+    }
+
+    &__content {
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        
+        @media (max-width: 888px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__left-block,
+    &__right-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        font-family: Gilroy-Bold;
+        max-width: 400px;
+        align-items: center;
+        
+        padding: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__icon {
+        padding-right: 10px;
+    }
+
+    &__text {
+        font-size: 22px;
+    }
+
+    &__text-wrapper {
+        .advantages__text:last-child{
+            font-size: 18px;
+        }
+    }
+
+    &__left-block {
+        @media (max-width: 888px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__right-block {
+    }
+
+    &__text-wrapper {
+    }
+}

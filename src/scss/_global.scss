@@ -7,6 +7,11 @@ ul li {list-style: none}
 * {margin: 0; padding: 0;}
 .d-none {display: none; opacity: 0;}
 .lock {overflow: hidden;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
 
 .overlay {
     position: fixed;
@@ -24,4 +29,9 @@ ul li {list-style: none}
 .overlay.open {
     opacity: 1;
     visibility: visible;
+}
+
+.filled {
+    background-color: #D4A910;
+    border-radius: 10px;
 }
