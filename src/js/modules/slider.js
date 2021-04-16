@@ -47,8 +47,11 @@ const slider = () => {
             }
     
             .mSlider__item {
-                flex: 0  0 ${this.options.widthSlide}% !important;
-                margin: 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                flex: 0 0 ${this.options.widthSlide}% !important;
+                margin: auto 0;
             }
             `;
             document.head.appendChild(style);
