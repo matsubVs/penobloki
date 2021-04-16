@@ -1,7 +1,17 @@
 .advantages {
-    background-image: url("../assets/concrete.webp") no-repeat center/cover;
+    background-image: url("../assets/mobile-background.webp") no-repeat center/cover;
     padding-top: 50px;
     padding-bottom: 100px;
+    @include _576 {
+        padding-bottom: 50px;
+    }
+
+    @include _576 {
+        background-image: url("../assets/mobile-background.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     &__title {
         font-family: Gilroy-Bold;
@@ -10,6 +20,16 @@
         font-size: 20px;
         margin: 0 auto;
         margin-bottom: 66px;
+        @include _576 {
+            margin-bottom: 33px;
+            font-size: 15px;
+            max-width: 350px;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 13px;
+            max-width: 320px;
+        }
     }
 
     &__content {
@@ -41,16 +61,34 @@
         &:not(:last-child) {
             margin-bottom: 32px;
         }
+
+        @include _576 {
+            background-color: transparent;
+        }
     }
 
     &__icon {
         padding-right: 10px;
         height: 76px;
         width: auto;
+        @include _576 {
+            height: 60px;
+        }
+
+        @media (max-width: 350px) {
+            height: 55px;
+        }
     }
 
     &__text {
         font-size: 22px;
+        @include _576 {
+            font-size: 19px;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 17px;
+        }
     }
 
     &__text-wrapper {

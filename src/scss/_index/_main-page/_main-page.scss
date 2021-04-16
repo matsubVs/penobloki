@@ -73,6 +73,9 @@
         
         padding: 31px 45px;
         margin-bottom: 111px;
+        @include _576 {
+            margin-bottom: 70px;
+        }
 
         color: #202020;
         background: linear-gradient(275.67deg, #C07606 1.94%, #E0BC3C 96.1%), #D7AB11;

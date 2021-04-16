@@ -48,21 +48,9 @@ const compileStyle = (cb) => {
         .pipe(gulp.dest(path.build.css))
 }
 
-const complieJs = (cb) => {
-    return gulp.src(path.src.js)
-        .pipe(babel({
-            presets: ['@babel/env']
-            }))
-        .pipe(uglify())
-        .pipe(concat("main.min.js"))
-        .pipe(gulp.dest(path.build.js))
-}
-
 const watch = (cb) => {
-    return gulp.watch(path.watch.js, complieJs),
-    gulp.watch(path.watch.scss, compileStyle)
+    return gulp.watch(path.watch.scss, compileStyle);
 }
 
-exports.build = gulp.parallel(compileStyle, complieJs);
 exports.watch = watch;
 exports.img = minImg;
