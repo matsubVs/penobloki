@@ -1,0 +1,67 @@
+.review {
+    padding: 19px 23px;
+    max-width: 318px;
+    background: #424242;
+    border-radius: 5px;
+    @include _576 {
+        padding: 19px 17px;
+        max-width: 310px;
+    }
+
+    &__img {
+        width: 124px;
+        height: 125px;
+        @include _576 {
+            width: 62px;
+            height: 60px;
+        }
+    }
+
+
+    &__header {
+        font-family: $font;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 20px;
+
+        color: #FFFFFF;
+    }
+
+    &__about {
+        margin-left: 15px;
+    }
+
+    &__author {
+        @include _576 {
+            font-size: 30px;
+        }
+    }
+
+    &__mark {
+    }
+
+    &__text {
+        font-family: $font;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 40px;
+        max-width: 275px;
+        
+        color: #FFFFFF;
+        
+        @include _576 {
+            font-size: 19px;
+            line-height: 22px;
+            max-width: 225px;
+        }
+    }
+
+    &__date {
+        font-family: $font;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        
+        color: rgba(255, 255, 255, 0.51);
+    }
+}

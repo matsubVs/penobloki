@@ -2,15 +2,9 @@
     background-image: url("../assets/mobile-background.webp") no-repeat center/cover;
     padding-top: 50px;
     padding-bottom: 100px;
+    
     @include _576 {
         padding-bottom: 50px;
-    }
-
-    @include _576 {
-        background-image: url("../assets/mobile-background.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
 
     &__title {
@@ -73,10 +67,12 @@
         width: auto;
         @include _576 {
             height: 60px;
+            width: auto;
         }
 
         @media (max-width: 350px) {
             height: 55px;
+            width: auto;
         }
     }
 
