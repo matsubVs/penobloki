@@ -1,6 +1,8 @@
 @import url("../../node_modules/normalize.css/normalize.css");
+@import "media-mixins";
 
 .flex {display: flex; align-items:center}
+.f-column {flex-direction: column;}
 .container {max-width: 940px; margin: 0 auto; padding: 0 15px;}
 a {text-decoration: none; color: inherit; font: inherit;}
 ul li {list-style: none}
@@ -14,6 +16,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 $font: "Gilroy-Bold";
 
+.arrow {
+    cursor: pointer;
+}
+
+.arrow-left,
+.arrow-right {
+ outline: none;
+ border: none;
+ width: 35px;
+ height: 67px;
+ background-image: url("../assets/arrow-tap.svg");
+ background-size: 35px 67px;
+ @include _576 {
+     background-size: 21px 40px;
+     width: 21px;
+     height: 40px;    
+ }
+}
 .overlay {
     position: fixed;
     left: 0;
@@ -30,6 +50,11 @@ $font: "Gilroy-Bold";
 .overlay.open {
     opacity: 1;
     visibility: visible;
+}
+
+.filled-yl-light {
+    background-color: #ecd06c;
+    border-radius: 10px;
 }
 
 .filled {

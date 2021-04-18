@@ -1,0 +1,15 @@
+@import "product";
+@import "production-slider";
+
+.production {
+
+    &__title {
+        text-align: center;
+        font-family: $font;
+        font-size: 48px;
+        line-height: 59px;
+        margin-top: 39px;
+        margin-bottom: 38px;
+    }
+}
+

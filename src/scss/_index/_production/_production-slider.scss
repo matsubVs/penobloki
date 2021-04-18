@@ -1,0 +1,29 @@
+.production-slider {
+    max-width: 1245px;
+    margin: 0 auto;
+    padding: 0 5px;
+
+    &__wrap {
+    }
+
+    &__item {
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 250px;
+        z-index: 3;
+        @include _576 {
+            bottom: 240px;   
+        }
+    }
+
+    &__arrow-left {
+        transform: rotate(180deg);
+    }
+
+    &__arrow-right {
+    }
+}

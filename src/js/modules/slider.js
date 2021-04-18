@@ -144,11 +144,11 @@ const slider = () => {
         }
     }
 
-    const slider = new MSlider({
-        main: '.reviews__slider',
-        wrap: '.slider__wrap',
-        next: '.slider__arrow-right',
-        prev: '.slider__arrow-left',
+    const sliderReviews = new MSlider({
+        main: '.reviews-slider',
+        wrap: '.reviews-slider__wrap',
+        next: '.reviews-slider__arrow-right',
+        prev: '.reviews-slider__arrow-left',
         slidesToShow: 3,
 
         responsive: [{
@@ -161,7 +161,26 @@ const slider = () => {
             },
         ]
     });
-    slider.init();
+    sliderReviews.init();
+
+    const sliderProduct = new MSlider({
+        main: '.production-slider',
+        wrap: '.production-slider__wrap',
+        next: '.production-slider__arrow-right',
+        prev: '.production-slider__arrow-left',
+        slidesToShow: 3,
+
+        responsive: [{
+            breakpoint: 1200,
+            slidesToShow: 2,
+            },
+            {
+            breakpoint: 842,
+            slidesToShow: 1,
+            },
+        ]
+    });
+    sliderProduct.init();
 }
 
 export default slider;

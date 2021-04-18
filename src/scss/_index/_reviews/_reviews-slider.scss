@@ -1,0 +1,30 @@
+.reviews-slider {
+    max-width: 1300px;
+    padding: 0 5px;
+    margin: 0 auto;
+    position: relative;
+
+    &__wrap {
+    }
+
+    &__review {
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 250px;
+        z-index: 3;
+        @include _576 {
+            bottom: 180px;   
+        }
+    }
+
+    &__arrow-left {
+        transform: rotate(180deg);   
+    }
+
+    &__arrow-right {
+    }
+}
