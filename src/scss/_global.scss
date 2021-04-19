@@ -37,9 +37,9 @@ $font: "Gilroy-Bold";
 }
 
 .hide {
-    visibility: hidden;
-    opacity: 0;
-    display: none;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
 }
 
 .overlay {
