@@ -28,12 +28,20 @@ $font: "Gilroy-Bold";
  height: 67px;
  background-image: url("../assets/arrow-tap.svg");
  background-size: 35px 67px;
+ padding: 10px;
  @include _576 {
      background-size: 21px 40px;
      width: 21px;
      height: 40px;    
  }
 }
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
 .overlay {
     position: fixed;
     left: 0;

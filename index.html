@@ -15,7 +15,6 @@
             <div class="container">
                 <div class="header__wrapper flex">
                     <div class="header__logo flex">
-                        <!-- <img class="header__img" src="" alt=""> -->
                         <h1 class="header__company-name"><a href="/">СВОД</a></h1>
                     </div>
                     <nav class="header__nav nav">
@@ -53,7 +52,11 @@
                         Ассортимент
                     </a>
                 </div>
-                <img class="main-page__img" src="build/assets/main-worker.webp" alt="">
+                <picture class="main-page__img">
+                    <source srcset="build/assets/main-worker.webp" type="image/webp">
+                    <source srcset="build/assets/main-worker.png" type="image/png"> 
+                    <img src="build/assets/main-worker.webp" alt="Alt Text!">
+                </picture>
             </div>
         </section>
     </div>
@@ -102,12 +105,19 @@
     </section>
     <section class="production">
         <h1 class="production__title">Наша продукция</h1>
+        <button class="production__back hide">Назад</button>
         <div class="production__slider production-slider">
             <div class="production-slider__wrap">
                 <div class="production-slider__item">
                     <div class="product">
                         <div class="product__wrapper flex f-column">
-                            <img src="./build/assets/penoblok.webp" alt="" class="product__img">
+                            <picture class="product__img">
+                                <source srcset="build/assets/penoblok.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/penoblok-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/penoblok.png" type="image/png" media="(min-width: 577px)"> 
+                                <source srcset="build/assets/penoblok-sm.png" type="image/png" media="(min-width: 310px)"> 
+                                <img src="build/assets/penoblok.webp" alt="Alt Text!">
+                            </picture>
                             <div class="product__about">
                                 <div class="product__top-block flex">
                                     <span>Характеристики</span>
@@ -140,7 +150,13 @@
                 <div class="production-slider__item">
                     <div class="product">
                         <div class="product__wrapper flex f-column">
-                            <img src="./build/assets/penoblok.webp" alt="" class="product__img">
+                            <picture class="product__img">
+                                <source srcset="build/assets/penoblok.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/penoblok-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/penoblok.png" type="image/png" media="(min-width: 577px)"> 
+                                <source srcset="build/assets/penoblok-sm.png" type="image/png" media="(min-width: 310px)"> 
+                                <img src="build/assets/penoblok.webp" alt="Alt Text!">
+                            </picture>
                             <div class="product__about">
                                 <div class="product__top-block flex">
                                     <span>Характеристики</span>
@@ -173,7 +189,13 @@
                 <div class="production-slider__item">
                     <div class="product">
                         <div class="product__wrapper flex f-column">
-                            <img src="./build/assets/penoblok.webp" alt="" class="product__img">
+                            <picture class="product__img">
+                                <source srcset="build/assets/penoblok.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/penoblok-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/penoblok.png" type="image/png" media="(min-width: 577px)"> 
+                                <source srcset="build/assets/penoblok-sm.png" type="image/png" media="(min-width: 310px)"> 
+                                <img src="build/assets/penoblok.webp" alt="Alt Text!">
+                            </picture>
                             <div class="product__about">
                                 <div class="product__top-block flex">
                                     <span>Характеристики</span>
@@ -217,7 +239,13 @@
                 <div class="reviews-slider__item">
                     <div class="review">
                         <div class="review__header flex">
-                            <img class="review__img" src="./build/assets/avatar.webp" alt="">
+                            <picture class="review__img">
+                                <source srcset="build/assets/avatar.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/avatar-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar-sm.png" type="image/png" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar.png" type="image/png" media="(min-width: 577px)"> 
+                                <img src="build/assets/avatar.webp" alt="Alt Text!">
+                            </picture>                            
                             <div class="review__about">
                                 <span class="review__author">Сергей</span>
                                 <div class="review__mark flex">
@@ -242,13 +270,19 @@
                         <p class="review__text">Приятные цены, большой ассортимент товаров, вежливые менеджеры, оперативная доставка.
                             Мне всё понравилось. 
                             Спасибо!</p>
-                        <p class="review__date">11.06.2021</p>
+                        <p class="review__date">11.04.2021</p>
                     </div>
                 </div>
                 <div class="reviews-slider__item">
                     <div class="review">
                         <div class="review__header flex">
-                            <img class="review__img" src="./build/assets/avatar.webp" alt="">
+                            <picture class="review__img">
+                                <source srcset="build/assets/avatar.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/avatar-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar-sm.png" type="image/png" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar.png" type="image/png" media="(min-width: 577px)"> 
+                                <img src="build/assets/avatar.webp" alt="Alt Text!">
+                            </picture>                            
                             <div class="review__about">
                                 <span class="review__author">Виктор</span>
                                 <div class="review__mark flex">
@@ -272,13 +306,19 @@
                         </div>
                         <p class="review__text">Очень доволен сотрудничеством 
                             с компанией “СВОД”. Заказывал пеноблоки D500. Доставили всё необходимое в нужные сроки. </p>
-                        <p class="review__date">11.06.2021</p>
+                        <p class="review__date">11.03.2021</p>
                     </div>
                 </div>
                 <div class="reviews-slider__item">
                     <div class="review">
                         <div class="review__header flex">
-                            <img class="review__img" src="./build/assets/avatar.webp" alt="">
+                            <picture class="review__img">
+                                <source srcset="build/assets/avatar.webp" type="image/webp" media="(min-width: 577px)">
+                                <source srcset="build/assets/avatar-sm.webp" type="image/webp" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar-sm.png" type="image/png" media="(min-width: 310px)">
+                                <source srcset="build/assets/avatar.png" type="image/png" media="(min-width: 577px)"> 
+                                <img src="build/assets/avatar.webp" alt="Alt Text!">
+                            </picture>                            
                             <div class="review__about">
                                 <span class="review__author">Михаил</span>
                                 <div class="review__mark flex">
@@ -301,7 +341,7 @@
                             </div>
                         </div>
                         <p class="review__text">Позвонил, рассчитали стоимость, договорились о доставке. Качество пеноблоков на должном уровне и по доступным ценам. </p>
-                        <p class="review__date">11.06.2021</p>
+                        <p class="review__date">11.02.2021</p>
                     </div>
                 </div>
             </div>
@@ -312,6 +352,10 @@
         </div>
         <div class="bg"></div>
     </section>
+    <div id="mymap" style="width: 100%; height: 300px">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A070c5217065a0a3e201efe38c812e4d4814e79b662092f47800717b17c69d5cf&amp;max-width=100%&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    
     <script src="build/js/bundle.js"></script> 
 </body>
 </html>
