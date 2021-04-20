@@ -142,6 +142,10 @@ const slider = () => {
             checkResponsive();
             window.addEventListener('resize', checkResponsive);
         }
+
+        reload() {
+            
+        }
     }
 
     const sliderReviews = new MSlider({
@@ -181,6 +185,25 @@ const slider = () => {
         ]
     });
     sliderProduct.init();
+
+    const sliderProductTop = new MSlider({
+        main: '.production-slider',
+        wrap: '.production-slider__wrap--toplevel',
+        next: '.production-slider__arrow-right',
+        prev: '.production-slider__arrow-left',
+        slidesToShow: 3,
+
+        responsive: [{
+            breakpoint: 1200,
+            slidesToShow: 2,
+            },
+            {
+            breakpoint: 842,
+            slidesToShow: 1,
+            },
+        ]
+    });
+    sliderProductTop.init();
 }
 
 export default slider;
