@@ -35,6 +35,10 @@ $font: "Gilroy-Bold";
      height: 40px;    
  }
 }
+.arrow-left {
+    transform: rotate(180deg);
+}
+
 
 .hide {
     visibility: hidden !important;
