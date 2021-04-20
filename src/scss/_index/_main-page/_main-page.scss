@@ -97,7 +97,7 @@
     &__img {
         position: absolute;
         z-index: -2;
-        top: 100%;
+        top: 101%;
         transform: translateY(-100%) translateX(100%);
         @include _992 {
             transform: translateY(-100%) translateX(85%);
