@@ -55,6 +55,7 @@ export default class MSlider {
         this.wrap.classList.add('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.add('mSlider__item'));
         this.options.position = 0;
+        this.addStyle();
     }
 
     addStyle() {

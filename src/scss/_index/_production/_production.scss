@@ -10,6 +10,10 @@
         line-height: 59px;
         margin-top: 39px;
         margin-bottom: 38px;
+        @include _576 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
     }
 
     &__back {
@@ -17,6 +21,14 @@
         z-index: 5;
         margin-bottom: 10px;
         margin-left: 5%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        color: gray;
+        font-family: $font;
+        border-bottom: 1px solid #FF9E2D;
+        font-size: 28px;
     }
 
     &__slider--top-level {

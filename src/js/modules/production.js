@@ -87,7 +87,6 @@ export default class ProductionController {
             next: '.production-slider__arrow-right-top',
             prev: '.production-slider__arrow-left-top',
             slidesToShow: 3,
-            infinity: true,
         
             responsive: [{
                 breakpoint: 1200,
@@ -107,7 +106,7 @@ export default class ProductionController {
         const target = e.target;
         if (target.classList.contains('product__button')) {
             e.preventDefault();
-            const blockID = target.textContent;
+            const blockID = target.dataset.id;
             this.MainSliderClassExample.removeClasses();
             this.toplevelBlockWrapper.textContent = '';
             
@@ -153,7 +152,6 @@ export default class ProductionController {
             next: '.production-slider__arrow-right',
             prev: '.production-slider__arrow-left',
             slidesToShow: 3,
-            infinity: true,
         
             responsive: [{
                 breakpoint: 1200,
