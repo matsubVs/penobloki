@@ -3,12 +3,6 @@
     margin: 0 auto;
     padding: 0 5px;
 
-    &__wrap {
-    }
-
-    &__item {
-    }
-
     &__buttons {
         display: flex;
         justify-content: space-between;
@@ -18,11 +12,5 @@
         @include _576 {
             bottom: 240px;   
         }
-    }
-
-    &__arrow-left {
-    }
-
-    &__arrow-right {
     }
 }

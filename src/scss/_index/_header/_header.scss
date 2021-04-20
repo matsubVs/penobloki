@@ -7,12 +7,6 @@
         justify-content: space-between;
     }
 
-    &__logo {
-    }
-
-    &__img {
-    }
-
     &__company-name {
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
@@ -21,12 +15,6 @@
         letter-spacing: 0.15em;
         
         color: #FFFFFF;
-    }
-
-    &__nav {
-    }
-
-    &__call {
     }
 
     &__swap {
@@ -63,6 +51,26 @@
         @include _768 {
             display: none;
         }
+    }
+
+    &__info-block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__call-link {
+        display: none;
+        @include _768 {
+            display: block;
+        }
+
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+
+    &__call-img {
+        width: 40px;
+        height: 40px;
     }
 
     &__phone {

@@ -4,12 +4,6 @@
     margin: 0 auto;
     position: relative;
 
-    &__wrap {
-    }
-
-    &__review {
-    }
-
     &__buttons {
         display: flex;
         justify-content: space-between;
@@ -19,12 +13,5 @@
         @include _576 {
             bottom: 180px;   
         }
-    }
-
-    &__arrow-left {
-        transform: rotate(180deg);   
-    }
-
-    &__arrow-right {
     }
 }

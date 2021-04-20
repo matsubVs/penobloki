@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <div class="main-page">
+    <div class="main-page" id="main-page">
         <header class="header">
             <div class="container">
                 <div class="header__wrapper flex">
@@ -19,10 +19,10 @@
                     </div>
                     <nav class="header__nav nav">
                         <ul class="nav__list flex">
-                            <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#main-page">Главная</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#production">Каталог</a></li>
                             <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#mymap">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="header__call flex">
@@ -32,9 +32,14 @@
                         </div>
                         <div class="header__swap"></div>
                     </div>
-                    <button class="header__burger burger" aria-label="Открыть меню">
-                        <span></span>
-                    </button>
+                    <div class="header__info-block">
+                        <a class="header__call-link" href="tel:+79035308165">
+                            <img class="header__call-img" src="./build/assets/phone.png" alt="Телефон">
+                        </a>
+                        <button class="header__burger burger" aria-label="Открыть меню">
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -103,7 +108,7 @@
             </div>
         </div>
     </section>
-    <section class="production">
+    <section class="production" id="production">
         <h1 class="production__title">Наша продукция</h1>
         <button class="production__back hide">Назад</button>
         <div class="production__slider production-slider">
@@ -435,8 +440,22 @@
         </div>
         <div class="bg"></div>
     </section>
-    <div id="mymap" style="width: 100%; height: 300px">
-        <a href="https://yandex.ru/maps/?um=constructor%3A070c5217065a0a3e201efe38c812e4d4814e79b662092f47800717b17c69d5cf&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A070c5217065a0a3e201efe38c812e4d4814e79b662092f47800717b17c69d5cf&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>    </div>
-    <script src="build/js/bundle.js"></script> 
-</body>
+    <div id="mymap" style="max-width: 100%; width: 100%; height: 600px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51131.08840675069!2d35.57385146316684!3d55.50281478167466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ca58ff44719dad%3A0x2b2e443a35e672cc!2z0KjQvtGF0L7QstC-LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNDMyNjA!5e0!3m2!1sru!2sru!4v1618953397638!5m2!1sru!2sru" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    <script src="build/js/bundle.js"></script> 
+    </div>
+    <footer class="footer">
+        <div class="container flex">
+            <div class="footer__left-block">
+                <div class="footer__item">ОГРН    1025003471712    от 5 ноября 2002 года</div>
+                <div class="footer__item">ИНН      5028018007</div>
+                <div class="footer__item">КПП      502801001</div>
+            </div>
+            <div class="footer__right-block">
+                <div class="footer__item">Код КЛАДР       500000563380005</div>
+                <div class="footer__item">Код ОПФ            12300    </div>
+                <div class="footer__item">Код ОКПО          45726941</div>
+            </div>
+        </div>
+    </footer>
+    </body>
 </html>
