@@ -136,7 +136,7 @@ export default class ProductionController {
         
                     this.switchWrapper();
                     document.querySelector('#production').scrollIntoView({
-                        block: "bottom",
+                        block: "center",
                         behavior: 'smooth'
                     });
                 });    

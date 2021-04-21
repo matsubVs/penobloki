@@ -55,7 +55,9 @@ export default class MSlider {
         this.wrap.classList.add('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.add('mSlider__item'));
         this.addStyle();
-        this.wrap.style.transform = `translateX(-0%)`
+        if (this.wrap.classList.contains('production-slider__wrap--toplevel')) {
+            this.wrap.style.transform = 'translateX(0%)'
+        }
     }
 
     addStyle() {
