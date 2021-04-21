@@ -1,11 +1,15 @@
+#mymap {
+    position: relative;
+}
+
 .contacts {
     position: absolute;
     z-index: 4;
-    margin-left: 5%;
-    margin-top: 150px;
+    right: 2px;
+    top: 10px;
     padding: 32px 9px;
 
-    background: rgba(255, 255, 255, 0.67);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
@@ -13,12 +17,17 @@
     font-family: $font;
 
     @include _576 {
-        font-size: 13px;
+        font-size: 10px;
         padding: 20px 5px;
         max-width: 200px;
     }
 
-    .container {
+    @media (max-width: 400px) {
+        padding: 7px 5px;
+        max-width: 170px;
+    }
+
+    .flex {
         flex-direction: column;
         align-items: baseline;
     }

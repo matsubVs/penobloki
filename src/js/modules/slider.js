@@ -4,7 +4,6 @@ export default class MSlider {
         wrap,
         next,
         prev,
-        position = 0,
         slidesToShow = 3,
         responsive = [],
         infinity = false
@@ -15,9 +14,14 @@ export default class MSlider {
         this.prev = document.querySelector(prev);
         this.next = document.querySelector(next);
         this.slidesToShow = slidesToShow,
-        this.responsive = responsive
+        this.responsive = responsive,
+
+        this.mainClass = main;
+        this.wrapClass = wrap;
+        this.childClass = main + '__item';
+
         this.options = {
-            position,
+            position: 0,
             widthSlide: Math.floor(100 / this.slidesToShow),
             infinity
         }
@@ -54,31 +58,31 @@ export default class MSlider {
         this.main.classList.add('mSlider');
         this.wrap.classList.add('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.add('mSlider__item'));
+        this.options.position = 0;
+        this.initResponsive();
+        this.checkButtons();
         this.addStyle();
-        if (this.wrap.classList.contains('production-slider__wrap--toplevel')) {
-            this.wrap.style.transform = 'translateX(0%)'
-        }
     }
 
     addStyle() {
-        let style = document.getElementById('mSliderCarusel-style')
+        let style = document.getElementById(`mSliderCarusel-style-${this.mainClass}`)
 
         if (!style) {
             style = document.createElement('style');
-            style.id = 'mSliderCarusel-style';
+            style.id = `mSliderCarusel-style-${this.mainClass}`;
         }
 
         style.textContent = `
-        .mSlider {
+        ${this.mainClass}.mSlider {
             overflow: hidden !important;
         }
-        .mSlider__wrap {
+        ${this.wrapClass}.mSlider__wrap {
             display: flex !important;
             transition: transform .5s !important;
             will-change: transform !important;
         }
 
-        .mSlider__item {
+        ${this.childClass}.mSlider__item {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -118,7 +122,12 @@ export default class MSlider {
         }
     }
 
-    initResponsive() {
+    initResponsive(destroy = false) {
+        if (destroy) {
+            window.removeEventListener('resize', checkResponsive);
+            return;
+        }
+
         const slidesToShowDefault = this.slidesToShow;
         const allResponsive = this.responsive.map(item => item.breakpoint);
         const masxResponsive = Math.max(...allResponsive);
@@ -150,5 +159,7 @@ export default class MSlider {
         this.wrap.classList.remove('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.remove('mSlider__item'));
         this.options.position = 0;
+        this.wrap.style.transform = 'translateX(0%)';
+        this.initResponsive(true);
     }
 }

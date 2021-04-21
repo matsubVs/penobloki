@@ -60,24 +60,30 @@ export default class ProductionController {
         this.toplevelBlockWrapper.appendChild(itemBlock);
     }
 
-    switchWrapper() {
-        if (this.mainBlockWrapper.classList.contains('hide')) {
-            this.mainBlockWrapper.classList.remove('hide');
-            this.toplevelBlockWrapper.classList.add('hide');
-            this.backButton.classList.add('hide');
-            this.mainBlockButtons.classList.remove('hide');
-            this.topBlockButtons.classList.add('hide');
-            this.TopSliderClassExample.removeClasses();
-            this.MainSliderClassExample.addMClass();
-        } else {
-            this.mainBlockWrapper.classList.add('hide');
-            this.toplevelBlockWrapper.classList.remove('hide'); 
-            this.backButton.classList.remove('hide');
-            this.mainBlockButtons.classList.add('hide');
-            this.topBlockButtons.classList.remove('hide');
-            this.TopSliderClassExample.addMClass();
-            this.MainSliderClassExample.removeClasses();
-        }
+    activateToplevelMenu() {
+        this.toplevelBlockWrapper.classList.remove('hide'); 
+        this.backButton.classList.remove('hide');
+        this.topBlockButtons.classList.remove('hide');
+        this.TopSliderClassExample.addMClass();
+    }
+
+    deactivateToplevelMenu() {
+        this.toplevelBlockWrapper.classList.add('hide'); 
+        this.backButton.classList.add('hide');
+        this.topBlockButtons.classList.add('hide');
+        this.TopSliderClassExample.removeClasses();
+    }
+
+    activateMainMenu() {
+        this.mainBlockWrapper.classList.remove('hide');
+        this.mainBlockButtons.classList.remove('hide');
+        this.MainSliderClassExample.addMClass();
+    }
+
+    deactivateMainMenu() {
+        this.mainBlockWrapper.classList.add('hide');
+        this.mainBlockButtons.classList.add('hide');
+        this.MainSliderClassExample.removeClasses();
     }
 
     createSlider() {
@@ -106,14 +112,17 @@ export default class ProductionController {
         const target = e.target;
         if (target.classList.contains('product__button')) {
             e.preventDefault();
-            const blockID = target.dataset.id;
-            this.MainSliderClassExample.removeClasses();
-            this.toplevelBlockWrapper.textContent = '';
             
             this.getData()
                 .then(response => response.json())
                 .then(data => {
+                    const blockID = target.dataset.id;
+
+                    this.deactivateMainMenu();
+                    this.toplevelBlockWrapper.textContent = '';
+
                     const selectedBlock = data[blockID];
+
                     for (let key in selectedBlock) {
                         const arrayOfDimension = selectedBlock[key];
                         
@@ -130,11 +139,10 @@ export default class ProductionController {
                 .then(() => {
                     if (!this.TopSliderClassExample) {
                         this.createSlider();
-                    } else {
-                        this.TopSliderClassExample.addMClass();
                     }
         
-                    this.switchWrapper();
+                    this.activateToplevelMenu();
+
                     document.querySelector('#production').scrollIntoView({
                         block: "center",
                         behavior: 'smooth'
@@ -143,9 +151,14 @@ export default class ProductionController {
         }
     }
 
+    controlBackButton() {
+        this.deactivateToplevelMenu();
+        this.activateMainMenu();
+    }
+
     eventHandlers() {
         this.mainBlock.addEventListener('click', this.controlProductsButton.bind(this));
-        this.backButton.addEventListener('click', this.switchWrapper.bind(this));
+        this.backButton.addEventListener('click', this.controlBackButton.bind(this));
     }
 
     init() {
