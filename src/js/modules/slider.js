@@ -54,12 +54,11 @@ export default class MSlider {
         this.main.classList.add('mSlider');
         this.wrap.classList.add('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.add('mSlider__item'));
-        this.options.position = 0;
         this.addStyle();
+        this.wrap.style.transform = `translateX(-0%)`
     }
 
     addStyle() {
-        this.options.position = 0;
         let style = document.getElementById('mSliderCarusel-style')
 
         if (!style) {

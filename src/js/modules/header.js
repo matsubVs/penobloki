@@ -6,6 +6,16 @@ const activateHeader = () => {
     const burger = document.querySelector('.burger');
     const overlay = document.querySelector('.overlay');
     const nav = document.querySelector('.nav');
+    const catalogButton = document.querySelector('.main-page__catalog');
+    
+    catalogButton.addEventListener('click', e => {
+        e.preventDefault();
+        smoothscroll.polyfill();
+        document.getElementById("production").scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 
     const unlockScroll = () => {
         document.body.classList.remove('lock');
@@ -34,13 +44,12 @@ const activateHeader = () => {
             if (closest) {
                 e.preventDefault();
                 const blockID = closest.querySelector('.nav__link').getAttribute('href').substr(1);
-
-                smoothscroll.polyfill();
                 
                 if (nav.classList.contains('transform')) {
                     toggleMenu();
                 }
-                
+        
+                smoothscroll.polyfill();        
                 
                 document.getElementById(blockID).scrollIntoView({
                     behavior: 'smooth',
