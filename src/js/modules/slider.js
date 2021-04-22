@@ -58,7 +58,7 @@ export default class MSlider {
         this.main.classList.add('mSlider');
         this.wrap.classList.add('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.add('mSlider__item'));
-        this.options.position = 0;
+        // this.options.position = 0;
         this.initResponsive();
         this.checkButtons();
         this.addStyle();
@@ -158,8 +158,11 @@ export default class MSlider {
     removeClasses() {
         this.wrap.classList.remove('mSlider__wrap');
         [...this.slides].forEach(item => item.classList.remove('mSlider__item'));
-        this.options.position = 0;
-        this.wrap.style.transform = 'translateX(0%)';
+        if (this.wrap.classList.contains('production-slider__wrap--toplevel')) {
+            this.options.position = 0;
+            this.wrap.style.transform = 'translateX(0%)';
+        }
+        
         this.initResponsive(true);
     }
 }

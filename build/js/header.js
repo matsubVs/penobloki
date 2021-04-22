@@ -22,20 +22,23 @@ const lockScroll = () => {
 }
 
 const openMenu = () => {
-    nav.classList.add('transform')
-    burger.classList.add('transform');
-    overlay.classList.add('open');
-    lockScroll()
+    if (!burger.classList.contains('hide')) {
+        lockScroll();
+        overlay.classList.add('open');
+        nav.classList.add('transform')
+        burger.classList.add('transform');    
+    }
 }
 
 const closeMenu = () => {
-    nav.classList.remove('transform')
-    burger.classList.remove('transform');
-    overlay.classList.remove('open');
-    unlockScroll();
-}
+    if (!burger.classList.contains('hide')) {
+        unlockScroll();
+        overlay.classList.remove('open');
+        nav.classList.remove('transform');
+        burger.classList.remove('transform');    
+    }}
 
-const handlerMenu = (e) => {
+const handlerMenu = () => {
     if (!nav.classList.contains('transform')) {
         openMenu();
         return;
@@ -62,6 +65,14 @@ nav.addEventListener('click', e => {
 });
 
 overlay.addEventListener('click', handlerMenu);
+window.addEventListener('resize', () => {
+    const widthWindow = document.documentElement.clientWidth
+    if (widthWindow <= 768) {
+        burger.classList.remove('hide');
+    } else {
+        burger.classList.add('hide');
+    }
+});
 
 swapArrow.addEventListener('click', () => {
     swapArrow.classList.toggle('transform');

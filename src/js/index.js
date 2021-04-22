@@ -1,9 +1,7 @@
 
 import MSlider from './modules/slider';
 import ProductionController from "./modules/production";
-import activateHeader from "./modules/header";
 
-activateHeader();
 const sliderReviews = new MSlider({
     main: '.reviews-slider',
     wrap: '.reviews-slider__wrap',
